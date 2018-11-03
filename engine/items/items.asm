@@ -128,8 +128,8 @@ ItemThiefBall:
 	ld a,[wIsInBattle]
 	and a
 	jp z,ItemUseNotTime ; not in battle
-	jp BallAnyway	
-	
+	jp BallAnyway
+
 ItemUseBall:
 
 ; Balls can't be used out of battle.
@@ -1990,7 +1990,7 @@ ItemUseOldRod:
 	ld c,[hl]
 	ld a, 1
 	jr RodResponse
-	
+
 INCLUDE "data/old_rod.asm"
 
 ItemUseGoodRod:

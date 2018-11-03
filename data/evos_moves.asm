@@ -2078,7 +2078,7 @@ Mon083_EvosMoves:
 ;Evolutions
 	db 0
 ;Learnset
-	db 1,POISON_JAB
+	db 1,LOW_SWEEP
 	db 1,PECK
 	db 1,GUST ; egg move
 	db 1,MUD_SLAP ; Sand Attack → similar move
@@ -2087,10 +2087,10 @@ Mon083_EvosMoves:
 	db 9,AERIAL_ACE
 	db 13,STEEL_WING ; Knock Off → TM move
 	db 19,SLASH
-	db 21,AIR_CUTTER
+	db 21,LEAF_BLADE
 	db 25,SWORDS_DANCE
 	db 31,AGILITY
-	db 33,NIGHT_SLASH
+	db 33,CROSS_CHOP
 	db 37,ACROBATICS
 	db 43,HI_JUMP_KICK ; Feint → new move
 	db 45,X_SCISSOR ; False Swipe → new move

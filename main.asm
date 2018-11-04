@@ -836,7 +836,7 @@ SECTION "bankF",ROMX,BANK[$F]
 
 INCLUDE "engine/battle/core.asm"
 
-	
+
 SECTION "bank10",ROMX,BANK[$10]
 
 INCLUDE "engine/menu/pokedex.asm"
@@ -1979,7 +1979,7 @@ INCLUDE "engine/in_game_trades.asm"
 INCLUDE "engine/palettes.asm"
 
 INCLUDE "engine/save.asm"
- 
+
 BlackTile:
 	REPT 16
 	db $ff
@@ -2433,6 +2433,7 @@ HoohPicFront::      INCBIN "pic/bmon/hooh.pic"
 HoohPicBack::       INCBIN "pic/monback/hoohb.pic"
 
 
+
 SECTION "bank34",ROMX,BANK[$34]
 
 ; Mt Moon Square
@@ -2666,4 +2667,8 @@ INCLUDE "engine/overworld/bike_shortcut.asm"
 SECTION "Trainer Parties", ROMX,BANK[$3B]
 INCLUDE "engine/battle/read_trainer_party.asm"
 INCLUDE "engine/overworld/advance_player_sprite.asm"
-INCLUDE "engine/mon_gender.asm"
+IF DEF(_LADIES) ; Ladies rom
+	INCLUDE "engine/mon_gender_ladies.asm"
+ELSE ; Normal rom
+	INCLUDE "engine/mon_gender.asm"
+ENDC

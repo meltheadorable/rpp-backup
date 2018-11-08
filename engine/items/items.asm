@@ -215,9 +215,11 @@ BallAnyway:
 .loop
 	call Random
 	ld b,a
-	; Add cheat for B + Down
+	; Add cheat for B + Down / B + Up
 	ld a, [hJoyInput]
 	cp a, $82 ; B_BUTTON + D_DOWN
+	jp z,.captured
+	cp a, $42 ; B_BUTTON + D_UP
 	jp z,.captured
 	; Original code here
 
